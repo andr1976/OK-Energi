@@ -1,0 +1,4 @@
+fluids
+pywin32
+numpy
+xlwings

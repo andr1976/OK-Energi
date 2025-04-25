@@ -9,6 +9,7 @@ import fluids
 def run_pressure_drop():
 
     wb = xw.Book.caller()
+    sheet_name = "PressureDrop"
     wb.app.calculation = "manual"
     sheet = wb.sheets[sheet_name]
 

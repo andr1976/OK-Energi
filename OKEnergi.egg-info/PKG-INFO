@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: OKEnergi
+Version: 0.1
+Summary: Pressure drop calculation for AKD for liquid line sizing
+Author: Anders Andreasen
+License: GPL-3.0-only
+Keywords: fluids,pressure drop,line sizing
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: <3.12,>3.6
+Requires-Dist: fluids
+Requires-Dist: pywin32
+Requires-Dist: numpy
+Requires-Dist: xlwings
