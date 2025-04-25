@@ -17,6 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only"
 ]
 dependencies = ["fluids", "pywin32", "numpy", "xlwings"]
-version = 0.1
+version = "0.1"
 
 
