@@ -1,0 +1,6 @@
+fluids
+xlwings
+setuptools
+pytest
+pywin32
+numpy 

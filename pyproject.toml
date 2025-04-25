@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "OKEnergi"
+authors = [
+    {name = "Anders Andreasen"}, 
+]
+description = "Pressure drop calculation for AKD for liquid line sizing"
+requires-python = ">3.6, <3.12"
+keywords = ["fluids","pressure drop","line sizing"]
+license = {text = "GPL-3.0-only"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3 :: Only"
+]
+dependencies = ["fluids", "pywin32", "numpy", "xlwings"]
+
