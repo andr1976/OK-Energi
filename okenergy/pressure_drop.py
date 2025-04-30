@@ -90,27 +90,37 @@ def run_pressure_drop():
             gate_throat = ID
         else:
             gate_throat /= 1000
-        K += fluids.K_gate_valve_Crane(gate_throat, ID, angle=45, fd=fd)
+        K += gate_no * fluids.K_gate_valve_Crane(gate_throat, ID, angle=45, fd=fd)
 
     if ball_no:
         if not ball_throat:
             ball_throat = ID
         else:
             ball_throat /= 1000
-        K += fluids.K_ball_valve_Crane(ball_throat, ID, angle=45, fd=fd)
+        K += ball_no * fluids.K_ball_valve_Crane(ball_throat, ID, angle=45, fd=fd)
 
     if globe_no:
         if not globe_throat:
             globe_throat = ID
         else:
             globe_throat /= 1000
-        K += fluids.K_globe_valve_Crane(globe_throat, ID, fd=fd)
+        K += globe_no * fluids.K_globe_valve_Crane(globe_throat, ID, fd=fd)
 
     if butterfly_no:
-        K += fluids.K_butterfly_valve_Crane(ID, fd=fd, style=0)
+        K += butterfly_no * fluids.K_butterfly_valve_Crane(ID, fd=fd, style=0)
 
     if check_no:
-        K += fluids.K_swing_check_valve_Crane(ID, fd=fd)
+        K += check_no * fluids.K_swing_check_valve_Crane(ID, fd=fd)
+
+    if tee_straight_no:
+        K += tee_straight_no * fluids.Darby3K(
+            Di=ID, Re=Re, name="Tee, Run-through, threaded, (r/D = 1)"
+        )
+
+    if tee_side_no:
+        K += tee_side_no * fluids.Darby3K(
+            Di=ID, Re=Re, name="Tee, Through-branch, (as elbow), flanged, (r/D = 1)"
+        )
 
     dP = fluids.dP_from_K(K, rho=rho, V=V) / 1e5
 
