@@ -3,6 +3,11 @@ import numpy as np
 import math
 import fluids
 
+def wide_space_default():
+    st.set_page_config(layout=“wide”)
+
+
+wide_space_default()
 col1, col2 = st.columns(2)
 
 with col1:
