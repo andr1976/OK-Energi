@@ -30,8 +30,7 @@ with col1:
         bend_90_rd = float(st.text_input("90 degree bend r/D", value=1.5))
         bend_45_rd = float(st.text_input("45 degree bend r/D", value=1.5))
 
-    exit_no = 0
-
+    exit_no = float(st.selectbox("Include pipe exit", options=[0, 1], index=0))
     butterfly_no = float(st.text_input("Number of butterfly valves", value=0))
 
     tee_straight_no = float(
